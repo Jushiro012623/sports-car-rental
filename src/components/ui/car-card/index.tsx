@@ -4,16 +4,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import { Button, Card, Chip } from "@heroui/react";
 import clsx from "clsx";
 import Image from "next/image";
-
-export type CarCardProps = {
-    id: number;
-    src: string;
-    model: string;
-    rentPerDay: string;
-    speedKmh: number;
-    accelerationSec: number;
-    horsepower: number;
-};
+import {CarInfo} from "@app/types";
 
 export const CarCard = ({
                             src,
@@ -22,7 +13,7 @@ export const CarCard = ({
                             horsepower,
                             rentPerDay,
                             model,
-                        }: CarCardProps) => {
+                        }: CarInfo) => {
     return (
         <Card className="col-span-2 min-h-112 overflow-hidden rounded-3xl relative group">
 

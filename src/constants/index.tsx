@@ -1,6 +1,6 @@
-
 import {FaInstagram, FaWhatsapp} from "react-icons/fa6";
 import {BsCarFrontFill, BsPatchCheck, BsPersonCircle, BsWallet2} from "react-icons/bs";
+import {CarInfo, RentalRequirements, Testimonials} from "@app/types";
 
 export const navigations = [
     {
@@ -34,7 +34,7 @@ export const socialLinks = [
 
 ]
 
-export const carModels = [
+export const carModels: CarInfo[] = [
     {
         id: 1,
         model: "Porsche 911 GT3 RS",
@@ -73,7 +73,7 @@ export const carModels = [
     },
 ]
 
-export const rentalRequirements = [
+export const rentalRequirements: RentalRequirements[] = [
     {
         id: 1,
         requirement: "21 years",
@@ -99,4 +99,28 @@ export const rentalRequirements = [
         description: "Security deposit"
     },
 
+]
+
+export const clientTestimonials: Testimonials[] = [
+    {
+        id: 1,
+        message: "The premium car I rented was impeccable. Smooth ride, elegant design, and absolutely reliable. The team made the entire process easy professional, and stress-free. I'll definitely come back for my next trip.",
+        name: "Brian O'Conner",
+        imageSrc: "#",
+        stars: 5
+    },
+    {
+        id: 2,
+        message: "I booked a premium car for a special occasion, and it exceeded all my expectations. The staff was very helpful and made everything simple, while the car itself turned the day into something truly memorable",
+        name: "Roman Pierce",
+        imageSrc: "3",
+        stars: 5
+    },
+    {
+        id: 3,
+        message: "The selection of high-end cars was impressive, and the booking process was effortless. I felt safe and confident behind the wheel. A perfect choice for anyone wanting to experience true luxury on the road.",
+        name: "Dominic Torreto",
+        imageSrc: "#",
+        stars: 5
+    }
 ]

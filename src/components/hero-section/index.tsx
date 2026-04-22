@@ -1,6 +1,6 @@
 import Image from "next/image";
-import {Button, Chip} from "@heroui/react";
-import {GiCutDiamond} from "react-icons/gi";
+import {Button} from "@heroui/react";
+import {TestimonialEmblem} from "@components/ui/testimonial-emblem";
 
 export const HeroSection = () => {
     return (
@@ -15,12 +15,7 @@ export const HeroSection = () => {
             <div className=" absolute inset-0">
                 <div className="max-w-8xl mx-auto h-full px-6 sm:px-10 flex items-center">
                     <div className="max-w-2xl space-y-5 mt-40">
-                        <Chip size="lg" variant="primary">
-                            <GiCutDiamond size={15}/>
-                            <span className="ml-2">
-                                Chosen by more than 250 clients
-                            </span>
-                        </Chip>
+                        <TestimonialEmblem />
                         <h1 className="capitalize text-4xl sm:text-7xl font-semibold leading-tight">
                             premium car rental in los angeles
                         </h1>
