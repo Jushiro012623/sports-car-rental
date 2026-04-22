@@ -4,7 +4,7 @@ import {rentalFAQ} from "@app/constants";
 
 export const FAQSection = () => {
     return (
-        <Section className={'w-full min-h-screen'}>
+        <Section className={'w-full '}>
             <Section.Container className={"pt-50 flex justify-between"}>
                 <TitleText className={"max-w-xl"}>Frequently Asked Question</TitleText>
                 <div className={"w-4xl max-w-4xl space-y-10"}>

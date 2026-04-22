@@ -1,4 +1,15 @@
-import {HeroSection, RentalTermsSection, SelectionSection, TestimonialSection, GuideSection, ServiceSection, FAQSection} from "@app/components";
+
+import {
+    HeroSection,
+    RentalTermsSection,
+    SelectionSection,
+    TestimonialSection,
+    GuideSection,
+    NewsAndStoriesSection,
+    ServiceSection,
+    FAQSection,
+    BookSection
+} from "@app/components";
 
 export default function Home() {
     return (
@@ -10,6 +21,8 @@ export default function Home() {
             <GuideSection />
             <ServiceSection />
             <FAQSection />
+            <NewsAndStoriesSection />
+            <BookSection />
         </main>
     );
 }

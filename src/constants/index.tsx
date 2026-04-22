@@ -228,3 +228,58 @@ export const rentalFAQ = [
         ],
     },
 ];
+
+export const newsAndStories = [
+    {
+        id: 1,
+        headline: "Dodge Challenger SRT Demon joins our premium supercar collection",
+        date: "February 20, 2026",
+        imgSrc: "/dodge-demon.png",
+        href: "#"
+    },
+    {
+        id: 2,
+        headline: "Experience the thrill: Lamborghini Huracán now available for rent",
+        date: "March 5, 2026",
+        imgSrc: "/huracan.png",
+        href: "#"
+    },
+    {
+        id: 3,
+        headline: "Top 5 sports cars you need to drive at least once in your life",
+        date: "March 18, 2026",
+        imgSrc: "/top5-scar.png",
+        href: "#"
+    },
+]
+
+export const securityNav  = [
+    {
+        id: 1,
+        name: "Terms",
+        href: "terms-and-condition"
+    }, {
+        id: 2,
+        name: "Privacy",
+        href: "privacy-policy"
+    }, {
+        id: 3,
+        name: "Cookies",
+        href: "cookies"
+    }
+]
+export const contacts  = [
+    {
+        id: 1,
+        name: "Address",
+        value: "012438 Anywhere Blvd, Los Angeles, USA"
+    }, {
+        id: 2,
+        name: "Email",
+        value: "ifinity.dev@gmail.com"
+    }, {
+        id: 3,
+        name: "Phone",
+        value: "09123094823"
+    }
+]

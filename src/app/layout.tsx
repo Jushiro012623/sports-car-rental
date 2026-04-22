@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import {Exo_2} from "next/font/google";
-import {NavBar} from "@app/components";
+import {Footer, LenisSmoothScroll, NavBar} from "@app/components";
 import clsx from "clsx";
 
 const exo = Exo_2({
@@ -30,7 +30,9 @@ export default function RootLayout({
         >
         <body className="font-exo bg-body text-white">
         <NavBar/>
+        <LenisSmoothScroll />
         {children}
+        <Footer />
         </body>
         </html>
     );

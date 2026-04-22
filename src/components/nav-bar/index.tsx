@@ -5,7 +5,7 @@ import {Button} from "@heroui/react";
 
 export const NavBar = () => {
     return (
-        <header className={'fixed top-0 w-full h-20 py-5 z-10'}>
+        <header className={'absolute top-0 w-full h-20 py-5 z-10'}>
             <nav className="relative h-full max-w-8xl px-6 sm:px-10  mx-auto flex justify-between items-center">
                 <Link href='/' className='flex justify-center items-center '>
                     <Image

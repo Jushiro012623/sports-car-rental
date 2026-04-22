@@ -25,7 +25,7 @@ export const HeroSection = () => {
                         </p>
                         <Button className="capitalize mt-5" size={'lg'}>
                             choose your car
-                        </Button>center
+                        </Button>
 
                     </div>
 
