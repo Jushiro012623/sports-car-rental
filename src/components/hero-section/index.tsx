@@ -1,10 +1,11 @@
 import Image from "next/image";
 import {Button} from "@heroui/react";
 import {TestimonialEmblem} from "@components/ui/testimonial-emblem";
+import {Section} from "@app/components";
 
 export const HeroSection = () => {
     return (
-        <section className="relative h-screen w-full mx-auto flex">
+        <Section className="relative h-screen w-full mx-auto flex">
             <Image
                 src="/bmw.svg"
                 alt="bmw"
@@ -12,8 +13,8 @@ export const HeroSection = () => {
                 className="object-cover opacity-30"
                 priority
             />
-            <div className=" absolute inset-0">
-                <div className="max-w-8xl mx-auto h-full px-6 sm:px-10 flex items-center">
+            <Section.Container className=" absolute inset-0">
+                <div className="h-full flex items-center">
                     <div className="max-w-2xl space-y-5 mt-40">
                         <TestimonialEmblem />
                         <h1 className="capitalize text-4xl sm:text-7xl font-semibold leading-tight">
@@ -24,12 +25,12 @@ export const HeroSection = () => {
                         </p>
                         <Button className="capitalize mt-5" size={'lg'}>
                             choose your car
-                        </Button>
+                        </Button>center
 
                     </div>
 
                 </div>
-            </div>
-        </section>
+            </Section.Container>
+        </Section>
     );
 };

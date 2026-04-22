@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import "./globals.css";
 import {Exo_2} from "next/font/google";
 import {NavBar} from "@app/components";
+import clsx from "clsx";
 
 const exo = Exo_2({
     subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function RootLayout({
     return (
         <html
             lang="en"
-            className={exo.variable}
+            className={clsx(exo.variable, 'dark')}
         >
         <body className="font-exo bg-body text-white">
         <NavBar/>

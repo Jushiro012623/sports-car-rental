@@ -5,12 +5,12 @@
     --font-exo2: "Exo 2";
 }
 
-/*@custom-variant dark (&:is(.dark *));*/
+@custom-variant dark (&:is(.dark *));
 
 @theme {
     --color-body: #000000;
     --color-white: #FFFFFF;
-    --color-subtitle: #E0E0E0;
+    --color-subtitle: #888B91;
     --color-container: #090a0b;
     --color-container-elevated: #111213;
     --color-container-muted: #27292a;

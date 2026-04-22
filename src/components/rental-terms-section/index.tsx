@@ -1,13 +1,12 @@
-import {Avatar, Button} from "@heroui/react";
+import {Avatar, Button, Card} from "@heroui/react";
 import {rentalRequirements} from "@app/constants";
-import {TitleText} from "@app/components";
+import {Section, TitleText} from "@app/components";
 import {RentalRequirements} from "@app/types";
 
 export const RentalTermsSection = () => {
     return (
-        <section className="w-full">
-            <div className="max-w-8xl pt-50 mx-auto px-6 sm:px-10">
-
+        <Section className="w-full">
+            <Section.Container className="pt-50">
                 <div
                     className="bg-container w-full min-h-120 rounded-3xl px-15 py-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
 
@@ -51,7 +50,7 @@ export const RentalTermsSection = () => {
                     {/* RIGHT SIDE (2x2 GRID) */}
                     <div className="grid grid-cols-2 grid-rows-2 gap-5">
                         {rentalRequirements.map(({id, requirement, icon: Icon, description}: RentalRequirements) => (
-                            <div key={id}
+                            <Card key={id}
                                  className="bg-container-elevated rounded-3xl p-10 flex justify-center flex-col gap-5">
                             <span className={'bg-container-muted p-3.5 rounded-xl w-fit'}>
                                 <Icon size={25}/>
@@ -60,13 +59,13 @@ export const RentalTermsSection = () => {
                                     <h3 className={"text-lg font-semibold"}>{requirement}</h3>
                                     <p className={"text-sm text-subtitle/70"}>{description}</p>
                                 </div>
-                            </div>
+                            </Card>
                         ))}
                     </div>
 
                 </div>
 
-            </div>
-        </section>
+            </Section.Container>
+        </Section>
     )
 }

@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa70cde-4134-413c-a48d-75e9e5957b32" name="Changes" comment="Add testimonial UI components, types, and constants&#10;&#10;This update introduces a full testimonial section, including `TestimonialEmblem`, `TestimonialCard`, `TitleText`, and `TestimonialSection`.  New TypeScript types for testimonials, rental requirements, and car info have been added, along with updated constants. The homepage layout now renders testimonials alongside existing hero, car-card, and rental‑terms components.">
-      <change afterPath="$PROJECT_DIR$/public/brianoconner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dom.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/romanpearce.jpg" afterDir="false" />
+    <list default="true" id="5aa70cde-4134-413c-a48d-75e9e5957b32" name="Changes" comment="Update testimonial data, add images, and fix avatar styling.">
+      <change afterPath="$PROJECT_DIR$/public/charger-rear.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/dodge-demon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/svj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/toyota-gt-engine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/toyota-gt-hood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/toyota-gt-seat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/toyota-gt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/faq-section/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/guide-section/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/section/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/service-section/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/hero-section/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero-section/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/rental-terms-section/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/rental-terms-section/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/selection-section/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/selection-section/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/testimonial-section/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/testimonial-section/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/car-card/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/car-card/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +115,7 @@
       <workItem from="1776739634095" duration="132000" />
       <workItem from="1776739780749" duration="379000" />
       <workItem from="1776740205190" duration="18773000" />
-      <workItem from="1776823849859" duration="7099000" />
+      <workItem from="1776823849859" duration="13765000" />
     </task>
     <task id="LOCAL-00001" summary="Add homepage UI with hero, car‑card, rental‑terms components and updated layout, fonts, theme, and dependencies.">
       <option name="closed" value="true" />
@@ -124,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776830147494</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update testimonial data, add images, and fix avatar styling.">
+      <option name="closed" value="true" />
+      <created>1776834319795</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776834319795</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +159,7 @@
     <MESSAGE value="Add homepage UI with hero, car‑card, rental‑terms components and updated layout, fonts, theme, and dependencies." />
     <MESSAGE value="Add Yarn node‑modules linker config, a placeholder testimonial component, and IDE workspace settings for IntelliJ." />
     <MESSAGE value="Add testimonial UI components, types, and constants&#10;&#10;This update introduces a full testimonial section, including `TestimonialEmblem`, `TestimonialCard`, `TitleText`, and `TestimonialSection`.  New TypeScript types for testimonials, rental requirements, and car info have been added, along with updated constants. The homepage layout now renders testimonials alongside existing hero, car-card, and rental‑terms components." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add testimonial UI components, types, and constants&#10;&#10;This update introduces a full testimonial section, including `TestimonialEmblem`, `TestimonialCard`, `TitleText`, and `TestimonialSection`.  New TypeScript types for testimonials, rental requirements, and car info have been added, along with updated constants. The homepage layout now renders testimonials alongside existing hero, car-card, and rental‑terms components." />
+    <MESSAGE value="Update testimonial data, add images, and fix avatar styling." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update testimonial data, add images, and fix avatar styling." />
   </component>
 </project>

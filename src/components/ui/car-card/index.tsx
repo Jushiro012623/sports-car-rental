@@ -15,7 +15,7 @@ export const CarCard = ({
                             model,
                         }: CarInfo) => {
     return (
-        <Card className="col-span-2 min-h-112 overflow-hidden rounded-3xl relative group">
+        <Card className="col-span-2 min-h-112 overflow-hidden rounded-3xl relative group bg-transparent">
 
             {/* Background */}
             <Card.Content className="absolute inset-0">

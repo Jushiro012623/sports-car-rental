@@ -124,3 +124,107 @@ export const clientTestimonials: Testimonials[] = [
         stars: 5
     }
 ]
+
+export const rentalGuide = [
+    {
+        id: "01",
+        guide: "Choose your car",
+        description: "Pick the premium model that suits your plans."
+    },
+    {
+        id: "02",
+        guide: "Contact Us",
+        description: "Confirm availability and request a free quote."
+    },
+    {
+        id: "03",
+        guide: "Confirm & Secure",
+        description: "Send documents, pay deposit and we'll handle the rest."
+    },
+    {
+        id: "04",
+        guide: "Drive in Style",
+        description: "We deliver your car straight to your door in just 90 minutes."
+    },
+]
+
+export const rentalService = [
+    {
+        id: 1,
+        service: "Fully insured, no surprises",
+        description: "Your rental includes full coverage, so you can drive with complete peace of mind.",
+        imgSrc: "/toyota-gt.png"
+    },
+    {
+        id: 2,
+        service: "Clear pricing, no hidden fees",
+        description: "What you see is what you pay. No unexpected charges after your trip.",
+        imgSrc: "/toyota-gt-seat.png"
+    },
+    {
+        id: 3,
+        service: "Car to your door in 90 minutes",
+        description: "Skip the trip to the rental office and we'll bring the car straight to you.",
+        imgSrc: "/toyota-gt-hood.png"
+    },
+    {
+        id: 4,
+        service: "24/7 customer support",
+        description: "Whatever happens on the road, we're here to help at any time, day or night",
+        imgSrc: "/toyota-gt-engine.png"
+    },
+
+]
+
+export const rentalFAQ = [
+    {
+        title: "General",
+        items: [
+            {
+                title: "How do I book a sports car?",
+                content:
+                    "Browse our available sports cars, choose your preferred vehicle, select your rental dates, and complete the booking with your payment details.",
+            },
+            {
+                title: "Can I modify or cancel my booking?",
+                content:
+                    "Yes, bookings can be modified or canceled before the scheduled rental date, depending on the terms of your reservation.",
+            },
+            {
+                title: "Are there mileage limits?",
+                content:
+                    "Some rentals include a daily mileage limit. Additional mileage may incur extra charges depending on the vehicle.",
+            },
+        ],
+    },
+    {
+        title: "Licensing",
+        items: [
+            {
+                title: "What are the requirements to rent a car?",
+                content:
+                    "Renters must meet the minimum age requirement, hold a valid driver's license, and provide a valid ID and payment method.",
+            },
+            {
+                title: "Do I need a special license for sports cars?",
+                content:
+                    "No special license is required, but a valid driver's license is mandatory. Some high-performance vehicles may have stricter eligibility requirements.",
+            },
+        ],
+    },
+    {
+        title: "Support",
+        items: [
+            {
+                title: "How do I get support?",
+                content:
+                    "You can contact our support team through our website or via email for assistance with bookings, issues, or inquiries.",
+            },
+            {
+                title: "What happens in case of damage or accident?",
+                content:
+                    "Please contact us immediately. Our team will guide you through the process, and coverage will depend on your rental agreement and insurance.",
+            },
+        ],
+    },
+];

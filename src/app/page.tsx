@@ -1,4 +1,4 @@
-import {HeroSection, RentalTermsSection, SelectionSection, TestimonialSection} from "@app/components";
+import {HeroSection, RentalTermsSection, SelectionSection, TestimonialSection, GuideSection, ServiceSection, FAQSection} from "@app/components";
 
 export default function Home() {
     return (
@@ -7,6 +7,9 @@ export default function Home() {
             <SelectionSection/>
             <RentalTermsSection/>
             <TestimonialSection />
+            <GuideSection />
+            <ServiceSection />
+            <FAQSection />
         </main>
     );
 }
