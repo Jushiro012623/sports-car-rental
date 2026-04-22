@@ -24,6 +24,7 @@ export const TestimonialCard = ({message, name, stars, imageSrc}: Omit<Testimoni
                         alt={name}
                         src={imageSrc}
                         loading={'lazy'}
+                        className={'object-cover object-center'}
                     />
                     <Avatar.Fallback>{name?.charAt(0)}</Avatar.Fallback>
                 </Avatar>

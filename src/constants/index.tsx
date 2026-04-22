@@ -106,21 +106,21 @@ export const clientTestimonials: Testimonials[] = [
         id: 1,
         message: "The premium car I rented was impeccable. Smooth ride, elegant design, and absolutely reliable. The team made the entire process easy professional, and stress-free. I'll definitely come back for my next trip.",
         name: "Brian O'Conner",
-        imageSrc: "#",
+        imageSrc: "/brianoconner.jpg",
         stars: 5
     },
     {
         id: 2,
-        message: "I booked a premium car for a special occasion, and it exceeded all my expectations. The staff was very helpful and made everything simple, while the car itself turned the day into something truly memorable",
-        name: "Roman Pierce",
-        imageSrc: "3",
+        message: "I booked a premium car for a special occasion, and it exceeded all my expectations. The staff was very helpful and made everything simple, while the car itself turned the day into something truly memorable.",
+        name: "Roman Pearce",
+        imageSrc: "/romanpearce.jpg",
         stars: 5
     },
     {
         id: 3,
         message: "The selection of high-end cars was impressive, and the booking process was effortless. I felt safe and confident behind the wheel. A perfect choice for anyone wanting to experience true luxury on the road.",
         name: "Dominic Torreto",
-        imageSrc: "#",
+        imageSrc: "/dom.jpeg",
         stars: 5
     }
 ]
