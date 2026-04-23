@@ -2,7 +2,7 @@ import { Section } from "@app/components";
 import Image from "next/image";
 import Link from "next/link";
 import {contacts, navigations, securityNav} from "@app/constants";
-import {Button, Form, SearchField} from "@heroui/react";
+import {Button, Form, SearchField, Separator} from "@heroui/react";
 export const Footer = () => {
     return (
         <Section className="w-full bg-container py-20 mt-30">
@@ -24,7 +24,8 @@ export const Footer = () => {
                                 <li key={id}><Link href='/'>{name}</Link></li>
                             ))}
                         </ul>
-                        <ul className=" flex flex-col gap-3 border-t pt-5">
+                        <Separator />
+                        <ul className=" flex flex-col gap-3">
                             {contacts.map(({id, name, value}) => (
                                 <li key={id} className={"flex gap-3"}>
                                     <span className={"w-20 text-white"}>{name}:</span>
@@ -45,7 +46,8 @@ export const Footer = () => {
                         <h1 className={"ml-3 text-subtitle text-sm"}>By subscribing to our newsletter, you agree to receive emails from us and accept out <Link href={'#'} className={"text-white "}> Privacy Policy</Link> </h1>
                     </Form>
                 </div>
-                <div className="flex justify-between border-t mt-20 mb-10 pt-10">
+                <Separator className="my-10" />
+                <div className="flex justify-between">
                     <h1>© {new Date().getFullYear()} Infinity . All rights reserved.</h1>
                     <ul className="text-subtitle flex gap-10">
                         {securityNav.map(({id, name}) => (
