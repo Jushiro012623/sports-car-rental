@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import {PropsWithChildren} from "react";
 
-type SectionProp = PropsWithChildren<{ className?: string }>
+type SectionProp = PropsWithChildren<{ className?: string, id?: string }>
 type ContainerProp = SectionProp
 
-const SectionRoot = ({ children, className }: SectionProp) => {
+const SectionRoot = ({ id, children, className }: SectionProp) => {
     return (
-        <section className={clsx("", className)}>
+        <section id={id} className={clsx("", className)}>
             {children}
         </section>
     );

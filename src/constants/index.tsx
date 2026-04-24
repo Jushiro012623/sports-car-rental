@@ -2,21 +2,92 @@ import {FaInstagram, FaWhatsapp} from "react-icons/fa6";
 import {BsCarFrontFill, BsPatchCheck, BsPersonCircle, BsWallet2} from "react-icons/bs";
 import {CarInfo, RentalRequirements, Testimonials} from "@app/types";
 
+export const manufacturers = [
+    "Acura",
+    "Alfa Romeo",
+    "Aston Martin",
+    "Audi",
+    "Bentley",
+    "BMW",
+    "Buick",
+    "Cadillac",
+    "Chevrolet",
+    "Chrysler",
+    "Citroen",
+    "Dodge",
+    "Ferrari",
+    "Fiat",
+    "Ford",
+    "GMC",
+    "Honda",
+    "Hyundai",
+    "Infiniti",
+    "Jaguar",
+    "Jeep",
+    "Kia",
+    "Lamborghini",
+    "Land Rover",
+    "Lexus",
+    "Lincoln",
+    "Maserati",
+    "Mazda",
+    "McLaren",
+    "Mercedes-Benz",
+    "MINI",
+    "Mitsubishi",
+    "Nissan",
+    "Porsche",
+    "Ram",
+    "Rolls-Royce",
+    "Subaru",
+    "Tesla",
+    "Toyota",
+    "Volkswagen",
+    "Volvo",
+];
+
+export const carTypes = [
+    "Sedan",
+    "SUV",
+    "Hatchback",
+    "Coupe",
+    "Convertible",
+    "Wagon",
+    "Pickup",
+    "Van",
+    "Luxury",
+    "Sports",
+    "Muscle",
+]
+
+export const transmissions = [
+    "Automatic",
+    "Manual",
+    "Semi-Automatic",
+    "CVT",
+    "Dual-Clutch",
+]
+
 export const navigations = [
     {
         id: 1,
         name: "Cars",
-        href: "cars"
-    }, {
+        section: "cars",
+        route: "/cars",
+    },
+    {
         id: 2,
         name: "Rental Terms",
-        href: "rental-terms"
-    }, {
+        section: "rental-terms",
+        route: "/rental-terms",
+    },
+    {
         id: 3,
         name: "News",
-        href: "news"
+        section: "news",
+        route: "/news-and-stories",
     }
-]
+];
 
 export const socialLinks = [
     {
@@ -64,12 +135,30 @@ export const carModels: CarInfo[] = [
     },
     {
         id: 4,
-        model: "Mercedes-AMG GT 63 S E",
+        model: "Mercedes-AMG GT 63 SE",
         rentPerDay: "1,420",
         speedKmh: 320,
         src: "/mercedes-amg-gt.png",
         accelerationSec: 3.2,
         horsepower: 816
+    },
+    {
+        id: 5,
+        model: "Lamborghini Huracán",
+        rentPerDay: "1,650",
+        speedKmh: 320,
+        src: "/huracan.png",
+        accelerationSec: 3.6,
+        horsepower: 602
+    },
+    {
+        id: 6,
+        model: "Dodge Challenger SRT Demon",
+        rentPerDay: "1,520",
+        speedKmh: 330,
+        src: "/srt-demon.png",
+        accelerationSec: 3.2,
+        horsepower: 826
     },
 ]
 
@@ -249,6 +338,20 @@ export const newsAndStories = [
         headline: "Top 5 sports cars you need to drive at least once in your life",
         date: "March 18, 2026",
         imgSrc: "/top5-scar.png",
+        href: "#"
+    },
+    {
+        id: 4,
+        headline: "The Gran Turismo World Series",
+        date: "March 02, 2025",
+        imgSrc: "/racing-2.png",
+        href: "#"
+    },
+    {
+        id: 5,
+        headline: "The Bugatti W16 Mistral will be available soon",
+        date: "September 18, 2024",
+        imgSrc: "/mistral.png",
         href: "#"
     },
 ]

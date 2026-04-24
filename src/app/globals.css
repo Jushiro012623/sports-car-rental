@@ -18,6 +18,10 @@
     --max-width-8xl: 1440px;
 }
 
+section {
+    scroll-margin-top: 100px;
+}
+
 @layer components {
     .button {
         @apply font-semibold data-[pending=true]:opacity-40 font-exo px-6 py-5;

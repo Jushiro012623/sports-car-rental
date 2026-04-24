@@ -1,10 +1,11 @@
 'use client'
 
 import { FaAngleRight } from "react-icons/fa6";
-import { Button, Card, Chip } from "@heroui/react";
+import { Card, Chip } from "@heroui/react";
 import clsx from "clsx";
 import Image from "next/image";
 import {CarInfo} from "@app/types";
+import Link from "next/link";
 
 export const CarCard = ({
                             src,
@@ -48,15 +49,15 @@ export const CarCard = ({
                     <div className="text-xl font-medium text-white">
                         {model}
                     </div>
-                    <div className="text-md text-subtitle">
+                    <div className="text-md text-white/60">
                         ${rentPerDay}/day
                     </div>
                 </div>
 
-                <Button size="sm" className="tracking-tight">
+                <Link href={"#"} className=" mt-5 capitalize button button--primary tracking-tight">
                     Learn More
                     <FaAngleRight />
-                </Button>
+                </Link>
             </Card.Footer>
 
         </Card>

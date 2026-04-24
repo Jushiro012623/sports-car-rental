@@ -1,0 +1,10 @@
+
+export {HeroSection} from './hero-section'
+export {SelectionSection} from './selection-section'
+export {RentalTermsSection} from './rental-terms-section'
+export {TestimonialSection} from './testimonial-section'
+export {GuideSection} from './guide-section'
+export {ServiceSection} from './service-section'
+export {FAQSection} from './faq-section'
+export {NewsAndStoriesSection} from './news-and-stories-section'
+export {BookSection} from './book-section'

@@ -3,10 +3,34 @@ import Image from "next/image";
 import Link from "next/link";
 import {contacts, navigations, securityNav} from "@app/constants";
 import {Button, Form, SearchField, Separator} from "@heroui/react";
+import {
+    SiAstonmartin, SiAudi,
+    SiBmw, SiFerrari,
+    SiLamborghini,
+    SiMazda,
+    SiMclaren,
+    SiMitsubishi,
+    SiNissan,
+    SiPorsche,
+    SiTesla
+} from "react-icons/si";
 export const Footer = () => {
     return (
         <Section className="w-full bg-container py-20 mt-30">
             <Section.Container className={" flex flex-col"}>
+                <div className="flex gap-5 justify-between">
+                    <SiMitsubishi className={"size-15"}/>
+                    <SiNissan className={"size-15"}/>
+                    <SiPorsche className={"size-15"}/>
+                    <SiBmw className={"size-15"}/>
+                    <SiFerrari className={"size-15"}/>
+                    <SiAudi className={"size-15"}/>
+                    <SiLamborghini className={"size-15"}/>
+                    <SiAstonmartin className={"size-15"}/>
+                    <SiMazda className={"size-15"}/>
+                    <SiMclaren className={"size-15"}/>
+                </div>
+                <Separator className="my-10" />
                 <div className="flex justify-between">
                     <div className="flex flex-col items-start gap-5">
                         <Link href='/' className='flex justify-center items-center '>

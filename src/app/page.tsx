@@ -9,7 +9,7 @@ import {
     ServiceSection,
     FAQSection,
     BookSection
-} from "@app/components";
+} from "@app/app/components";
 
 export default function Home() {
     return (
