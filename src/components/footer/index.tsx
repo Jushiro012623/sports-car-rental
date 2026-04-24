@@ -12,7 +12,6 @@ import {
     SiMitsubishi,
     SiNissan,
     SiPorsche,
-    SiTesla
 } from "react-icons/si";
 export const Footer = () => {
     return (

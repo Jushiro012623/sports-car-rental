@@ -1,8 +1,7 @@
 import {Section, TitleText} from "@app/components";
 import Image from "next/image";
-import {Button, Card} from "@heroui/react";
+import {Card} from "@heroui/react";
 import clsx from "clsx";
-import {FaAngleRight} from "react-icons/fa6";
 import {rentalService} from "@app/constants";
 
 export const ServiceSection = () => {

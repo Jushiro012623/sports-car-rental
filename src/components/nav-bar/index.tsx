@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import {navigations, socialLinks} from "@app/constants";
-import {Button} from "@heroui/react";
 import {useEffect, useState} from "react";
 import clsx from "clsx";
 import Link from "next/link";

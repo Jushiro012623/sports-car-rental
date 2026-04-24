@@ -1,5 +1,5 @@
 import {Section, TitleText} from "@app/components";
-import {Avatar, Button} from "@heroui/react";
+import {Avatar} from "@heroui/react";
 import Image from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
