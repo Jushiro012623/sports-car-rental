@@ -1,5 +1,4 @@
 import {NewAndStoriesCard, Section, TitleText} from "@app/components";
-import Link from "next/link";
 import {newsAndStories} from "@app/constants";
 import type {Metadata} from "next";
 import {Button} from "@heroui/react";
@@ -16,9 +15,7 @@ export default function NewsAndStoriesPage() {
         <Section id="news" className={'w-full'}>
             <Section.Container className={"pt-28 sm:pt-36 lg:pt-50"}>
                 <div className="flex w-full flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-                    <TitleText>Our Latest News and Stories</TitleText>
-                    <Link href="/news-and-stories" className={"button button--primary w-full text-center sm:w-auto"}>Explore
-                        News</Link>
+                    <TitleText>News and Stories</TitleText>
                 </div>
                 <div className="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-2 sm:mt-16 lg:grid-cols-3 lg:mt-30">
                     {newsAndStories.map((item) => (
