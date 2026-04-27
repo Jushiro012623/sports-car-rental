@@ -17,7 +17,7 @@ export default function CarsPage() {
             <Section.Container className="pt-28 sm:pt-36 lg:pt-50">
                 <TitleText className={'capitalize text-center'}>Available Cars</TitleText>
                 <CarFilters />
-                <div className="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-2 sm:mt-16 lg:grid-cols-3 xl:grid-cols-4 lg:mt-20">
+                <div className="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-2 sm:mt-16 lg:grid-cols-3  lg:mt-20">
                     {carModels.map((car: CarInfo) => (
                         <CarCard key={car.id} {...car} />
                     ))}

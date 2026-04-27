@@ -109,56 +109,68 @@ export const carModels: CarInfo[] = [
     {
         id: 1,
         model: "Porsche 911 GT3 RS",
+        slug: "porsche-911-gt3-rs",
         rentPerDay: "1,100",
         speedKmh: 330,
         src: "/porsche-gt3-rs.png",
         accelerationSec: 3.2,
-        horsepower: 520
+        horsepower: 520,
+        overview: "A track-focused icon built for precision, balance, and extreme performance. The Porsche 911 GT3 RS delivers race-inspired handling with everyday supercar presence."
     },
     {
         id: 2,
         model: "Nissan GT-R R35",
+        slug: "nissan-gt-r-r35",
         rentPerDay: "1,300",
         speedKmh: 320,
         src: "/nissan-gtr-r35.png",
         accelerationSec: 2.7,
-        horsepower: 570
+        horsepower: 570,
+        overview: "A legendary performance machine known for brutal acceleration, advanced all-wheel drive, and confidence-inspiring control on every road."
     },
     {
         id: 3,
         model: "Ford Mustang GTD",
+        slug: "ford-mustang-gtd",
         rentPerDay: "1,000",
         speedKmh: 300,
         src: "/ford-mustang-gtd.png",
         accelerationSec: 2.6,
-        horsepower: 486
+        horsepower: 486,
+        overview: "An aggressive American performance car with motorsport DNA, bold styling, and thrilling power made for unforgettable drives."
     },
     {
         id: 4,
         model: "Mercedes-AMG GT 63 SE",
+        slug: "mercedes-amg-gt-63-se",
         rentPerDay: "1,420",
         speedKmh: 320,
         src: "/mercedes-amg-gt.png",
         accelerationSec: 3.2,
-        horsepower: 816
+        horsepower: 816,
+        overview: "A luxury performance grand tourer combining AMG power, premium comfort, and refined technology for fast and elegant travel."
     },
     {
         id: 5,
         model: "Lamborghini Huracán",
+        slug: "lamborghini-huracan",
         rentPerDay: "1,650",
         speedKmh: 320,
         src: "/huracan.png",
         accelerationSec: 3.6,
-        horsepower: 602
+        horsepower: 602,
+        overview: "An exotic Italian supercar with dramatic styling, sharp response, and a naturally thrilling driving character that turns every trip into an event."
     },
     {
         id: 6,
         model: "Dodge Challenger SRT Demon",
+        slug: "dodge-challenger-srt-demon",
         rentPerDay: "1,520",
         speedKmh: 330,
         src: "/srt-demon.png",
         accelerationSec: 3.2,
-        horsepower: 826
+        horsepower: 826,
+        overview: "A raw muscle car engineered for explosive straight-line performance, massive power, and unmistakable road presence."
     },
 ]
 
@@ -279,7 +291,7 @@ export const rentalService = [
     {
         id: 4,
         service: "24/7 customer support",
-        description: "Whatever happens on the road, we're here to help at any time, day or night",
+        description: "Whatever happens on the road, we’re here to help at any times, day or night",
         imgSrc: "/toyota-gt-engine.png"
     },
 
@@ -292,7 +304,7 @@ export const rentalFAQ = [
             {
                 title: "How do I book a sports car?",
                 content:
-                    "Browse our available sports cars, choose your preferred vehicle, select your rental dates, and complete the booking with your payment details.",
+                    "Browse our available sports cars, choose your preferred vehicle, select your rented dates, and complete the booking with your payment details.",
             },
             {
                 title: "Can I modify or cancel my booking?",

@@ -19,10 +19,12 @@ export type RentalRequirements = {
 export type CarInfo = {
     id: number
     model: string;
+    slug: string;
     rentPerDay: string;
     speedKmh: number;
     src: string;
     accelerationSec: number;
     horsepower: number;
+    overview: string;
 }
 

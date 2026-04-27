@@ -14,6 +14,7 @@ export const CarCard = ({
                             horsepower,
                             rentPerDay,
                             model,
+                            slug,
                         }: CarInfo) => {
     return (
         <Card className="min-h-96 overflow-hidden rounded-3xl relative group bg-transparent sm:min-h-112">
@@ -58,7 +59,7 @@ export const CarCard = ({
                     </div>
                 </div>
 
-                <Link href={"#"} className="capitalize button button--primary w-full justify-center tracking-tight sm:mt-5 sm:w-auto">
+                <Link href={`/cars/${slug}`} className="capitalize button button--primary w-full justify-center tracking-tight sm:mt-5 sm:w-auto">
                     Learn More
                     <FaAngleRight />
                 </Link>
