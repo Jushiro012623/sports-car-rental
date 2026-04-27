@@ -13,18 +13,18 @@ export const FilterComboBox = ({
    options,
 }: FilterComboBoxProps) => {
     return (
-        <ComboBox className="w-max">
-            <ComboBox.InputGroup className="w-max">
+        <ComboBox className="w-full lg:w-max">
+            <ComboBox.InputGroup className="w-full lg:w-max">
                 <Input
                     placeholder={placeholder}
                     className={clsx(
-                        "rounded-full px-5 py-4 w-max min-w-37.5"
+                        "w-full min-w-0 rounded-full px-5 py-4 lg:w-max lg:min-w-37.5"
                     )}
                 />
-                <ComboBox.Trigger />
+                <ComboBox.Trigger className={"mr-2"}/>
             </ComboBox.InputGroup>
 
-            <ComboBox.Popover className="w-max">
+            <ComboBox.Popover className="w-full lg:w-max">
                 <ListBox
                     className="max-h-60 overflow-y-auto whitespace-nowrap"
                     onWheel={(e) => e.stopPropagation()}

@@ -1,10 +1,8 @@
 'use client'
 import {
     Button,
-    Calendar,
     ComboBox,
     DateField,
-    DatePicker,
     InputGroup,
     Label,
     ListBox,
@@ -14,28 +12,39 @@ import {FaCar, FaEnvelope} from "react-icons/fa6";
 import {FaPhone} from "react-icons/fa6";
 import {carModels} from "@app/constants";
 import {CarInfo} from "@app/types";
-import {Fragment} from "react";
+import {Fragment, useEffect, useState} from "react";
+
 
 export const BookingForm = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return null;
+    }
+
     return (
         <Fragment>
-            <TextField className="w-full max-w-md" name="email">
+            <TextField className="w-full max-w-md" name="full_name">
                 <Label className={"ml-2 mb-1"}>Full Name</Label>
                 <InputGroup className={"rounded-full"}>
                     <InputGroup.Prefix>
                         <FaEnvelope className="size-4 text-muted ml-3"/>
                     </InputGroup.Prefix>
-                    <InputGroup.Input className="w-full max-w-md px-5 py-4 " placeholder="Your Full Name"/>
+                    <InputGroup.Input className="w-full min-w-0 px-4 py-4 sm:px-5" placeholder="Your Full Name"/>
                 </InputGroup>
             </TextField>
 
-            <TextField className="w-full max-w-md" name="email">
+            <TextField className="w-full max-w-md" name="phone_number">
                 <Label className={"ml-2 mb-1"}>Phone Number</Label>
                 <InputGroup className={"rounded-full"}>
                     <InputGroup.Prefix>
                         <FaPhone className="size-4 text-muted ml-3"/>
                     </InputGroup.Prefix>
-                    <InputGroup.Input className="w-full max-w-md px-5 py-4 rounded-full" placeholder="Your Phone Number"/>
+                    <InputGroup.Input className="w-full min-w-0 rounded-full px-4 py-4 sm:px-5" placeholder="Your Phone Number"/>
                 </InputGroup>
             </TextField>
 
@@ -46,7 +55,7 @@ export const BookingForm = () => {
                         <InputGroup.Prefix>
                             <FaCar className="size-4 text-muted ml-3"/>
                         </InputGroup.Prefix>
-                        <InputGroup.Input className="w-full max-w-md px-5 py-4 rounded-full" placeholder="Choose Your Ride"/>
+                        <InputGroup.Input className="w-full min-w-0 rounded-full px-4 py-4 sm:px-5" placeholder="Choose Your Ride"/>
                     </InputGroup>
                     <ComboBox.Trigger className={"mr-3"}/>
                 </ComboBox.InputGroup>
@@ -62,79 +71,22 @@ export const BookingForm = () => {
                 </ComboBox.Popover>
             </ComboBox>
 
-            <div className="w-full max-w-md gap-3 flex">
-                <DatePicker className="w-64" name="date">
+            <div className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
+                <DateField className="w-full sm:w-1/2" name="pick_up_date">
                     <Label className={"ml-2 mb-1"}>Pick-up Date</Label>
-                    <DateField.Group className={"px-2 py-6.5 rounded-full"}>
-                        <DateField.Input >{(segment) => <DateField.Segment segment={segment}/>}</DateField.Input>
-                        <DateField.Suffix>
-                            <DatePicker.Trigger>
-                                <DatePicker.TriggerIndicator/>
-                            </DatePicker.Trigger>
-                        </DateField.Suffix>
+                    <DateField.Group className={'px-2 py-6.5 rounded-full'}>
+                        <DateField.Input className="w-full min-w-0 rounded-full px-4 py-4 sm:px-5">{(segment) => <DateField.Segment segment={segment} />}</DateField.Input>
                     </DateField.Group>
-                    <DatePicker.Popover>
-                        <Calendar aria-label="Event date">
-                            <Calendar.Header>
-                                <Calendar.YearPickerTrigger>
-                                    <Calendar.YearPickerTriggerHeading/>
-                                    <Calendar.YearPickerTriggerIndicator/>
-                                </Calendar.YearPickerTrigger>
-                                <Calendar.NavButton slot="previous"/>
-                                <Calendar.NavButton slot="next"/>
-                            </Calendar.Header>
-                            <Calendar.Grid>
-                                <Calendar.GridHeader>
-                                    {(day) => <Calendar.HeaderCell>{day}</Calendar.HeaderCell>}
-                                </Calendar.GridHeader>
-                                <Calendar.GridBody>{(date) => <Calendar.Cell date={date}/>}</Calendar.GridBody>
-                            </Calendar.Grid>
-                            <Calendar.YearPickerGrid>
-                                <Calendar.YearPickerGridBody>
-                                    {({year}) => <Calendar.YearPickerCell year={year}/>}
-                                </Calendar.YearPickerGridBody>
-                            </Calendar.YearPickerGrid>
-                        </Calendar>
-                    </DatePicker.Popover>
-                </DatePicker>
-
-                <DatePicker className="w-64" name="date">
+                </DateField>
+                <DateField className="w-full sm:w-1/2" name="drop_off_date">
                     <Label className={"ml-2 mb-1"}>Drop-off Date</Label>
-                    <DateField.Group  className={'px-2 py-6.5 rounded-full'}  >
-                        <DateField.Input  >{(segment) => <DateField.Segment segment={segment} />}</DateField.Input>
-                        <DateField.Suffix>
-                            <DatePicker.Trigger>
-                                <DatePicker.TriggerIndicator />
-                            </DatePicker.Trigger>
-                        </DateField.Suffix>
+                    <DateField.Group className={'px-2 py-6.5 rounded-full'}>
+                        <DateField.Input className="w-full min-w-0 rounded-full px-4 py-4 sm:px-5">{(segment) => <DateField.Segment segment={segment} />}</DateField.Input>
                     </DateField.Group>
-                    <DatePicker.Popover>
-                        <Calendar aria-label="Event date">
-                            <Calendar.Header>
-                                <Calendar.YearPickerTrigger>
-                                    <Calendar.YearPickerTriggerHeading />
-                                    <Calendar.YearPickerTriggerIndicator />
-                                </Calendar.YearPickerTrigger>
-                                <Calendar.NavButton slot="previous" />
-                                <Calendar.NavButton slot="next" />
-                            </Calendar.Header>
-                            <Calendar.Grid>
-                                <Calendar.GridHeader>
-                                    {(day) => <Calendar.HeaderCell>{day}</Calendar.HeaderCell>}
-                                </Calendar.GridHeader>
-                                <Calendar.GridBody>{(date) => <Calendar.Cell date={date} />}</Calendar.GridBody>
-                            </Calendar.Grid>
-                            <Calendar.YearPickerGrid>
-                                <Calendar.YearPickerGridBody>
-                                    {({year}) => <Calendar.YearPickerCell year={year} />}
-                                </Calendar.YearPickerGridBody>
-                            </Calendar.YearPickerGrid>
-                        </Calendar>
-                    </DatePicker.Popover>
-                </DatePicker>
+                </DateField>
             </div>
 
-            <Button type={'submit'} className={"w-full max-w-md text-base px-2 py-6.5"}>Book Now</Button>
+            <Button type={'submit'} className={"w-full max-w-md text-base px-2 py-5.5"}>Book Now</Button>
         </Fragment>
     )
 }

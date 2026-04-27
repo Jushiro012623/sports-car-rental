@@ -11,8 +11,8 @@ const exo = Exo_2({
 });
 
 export const metadata: Metadata = {
-    title: "Infinity",
-    description: "Infinity Car Rental Homepage",
+    title: "Turismo",
+    description: "Turismo Car Rental Homepage",
     icons: {
         icon: "./icon.png",
     },

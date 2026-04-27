@@ -16,7 +16,7 @@ export const CarCard = ({
                             model,
                         }: CarInfo) => {
     return (
-        <Card className="col-span-2 min-h-112 overflow-hidden rounded-3xl relative group bg-transparent">
+        <Card className="min-h-96 overflow-hidden rounded-3xl relative group bg-transparent sm:min-h-112">
 
             {/* Background */}
             <Card.Content className="absolute inset-0">
@@ -24,37 +24,41 @@ export const CarCard = ({
                     src={src}
                     alt={model}
                     fill
-                    sizes={'100%'}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover scale-100 group-hover:scale-105 transition-transform duration-500"
                     priority
                 />
             </Card.Content>
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-colors duration-500" />
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-500" />
 
             {/* Header */}
-            <Card.Header className="relative z-10 flex flex-row gap-2 p-5">
-                <Chip size="lg">{speedKmh} km/h</Chip>
-                <Chip size="lg">{accelerationSec} sec</Chip>
-                <Chip size="lg">{horsepower} hp</Chip>
+            <Card.Header className="relative z-10 flex flex-row gap-2 p-4 sm:p-5">
+                <Chip size="sm" className="sm:hidden w-fit px-3">{speedKmh} km/h</Chip>
+                <Chip size="sm" className="sm:hidden w-fit px-3">{accelerationSec} sec</Chip>
+                <Chip size="sm" className="sm:hidden w-fit px-3">{horsepower} hp</Chip>
+
+                <Chip size="lg" className="hidden w-fit sm:inline-flex">{speedKmh} km/h</Chip>
+                <Chip size="lg" className="hidden w-fit sm:inline-flex">{accelerationSec} sec</Chip>
+                <Chip size="lg" className="hidden w-fit sm:inline-flex">{horsepower} hp</Chip>
             </Card.Header>
 
             {/* Footer */}
             <Card.Footer className={clsx(
-                "relative z-10 mt-auto flex items-center justify-between p-5",
+                "relative z-10 mt-auto flex flex-col items-start gap-4 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5",
                 "transition-all duration-500"
             )}>
                 <div>
-                    <div className="text-xl font-medium text-white">
+                    <div className="text-lg font-medium text-white sm:text-xl">
                         {model}
                     </div>
-                    <div className="text-md text-white/60">
+                    <div className="text-sm text-white/60 sm:text-md">
                         ${rentPerDay}/day
                     </div>
                 </div>
 
-                <Link href={"#"} className=" mt-5 capitalize button button--primary tracking-tight">
+                <Link href={"#"} className="capitalize button button--primary w-full justify-center tracking-tight sm:mt-5 sm:w-auto">
                     Learn More
                     <FaAngleRight />
                 </Link>

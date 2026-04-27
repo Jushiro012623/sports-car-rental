@@ -7,11 +7,8 @@ import {BookingForm} from "@app/app/booking/components";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Infinity | Booking",
-    description: "Infinity Car Rental Booking Page",
-    icons: {
-        icon: "./icon.png",
-    },
+    title: "Turismo | Booking",
+    description: "Turismo Car Rental Booking Page"
 };
 
 export default function BookingPage() {
@@ -20,13 +17,13 @@ export default function BookingPage() {
            <Section className="w-full relative overflow-hidden">
 
                {/* Content */}
-               <Section.Container className="pt-50 relative z-10">
+               <Section.Container className="pt-28 sm:pt-36 lg:pt-50 relative z-10">
                    <TitleText className="capitalize text-center max-w-3xl mx-auto">
                        Book your premium car today
                    </TitleText>
 
-                   <div className="flex flex-col items-center gap-4 mt-30">
-                       <Avatar className="size-25 bg-transparent">
+                   <div className="flex flex-col items-center gap-4 mt-14 sm:mt-20 lg:mt-30">
+                       <Avatar className="size-20 bg-transparent sm:size-25">
                            <Avatar.Image
                                alt="Thomas Sheleby"
                                src="/thomas-shelby.jpg"
@@ -36,15 +33,15 @@ export default function BookingPage() {
                        </Avatar>
 
                        <div className="text-center">
-                           <h1 className="font-medium text-xl">Thomas Shelby</h1>
-                           <p className="text-base text-subtitle/70">
+                           <h1 className="font-medium text-lg sm:text-xl">Thomas Shelby</h1>
+                           <p className="text-sm text-subtitle/70 sm:text-base">
                                Your Personal Rental Assistant
                            </p>
                        </div>
 
-                       <Button className="mt-5">Call Us Now</Button>
+                       <Button className="mt-4 w-full sm:mt-5 sm:w-auto">Call Us Now</Button>
                    </div>
-                   <div className="relative w-full mt-30 p-20 rounded-4xl  overflow-hidden">
+                   <div className="relative w-full mt-14 overflow-hidden rounded-3xl p-3 sm:mt-20 sm:p-8 lg:mt-30 lg:rounded-4xl lg:p-20">
                        <Image
                            src="/gt.png"
                            alt="FORM BG"
@@ -54,7 +51,7 @@ export default function BookingPage() {
                            className="object-cover -z-10"
                            loading="eager"
                        />
-                       <Form className={"p-10 rounded-3xl max-w-lg mx-auto flex items-center justify-center bg-container flex-col gap-10"}>
+                       <Form className={"mx-auto flex w-full max-w-lg flex-col items-center justify-center gap-6 rounded-3xl bg-container p-5 sm:gap-8 sm:p-8 lg:gap-10 lg:p-10"}>
                            <BookingForm />
                        </Form>
                    </div>

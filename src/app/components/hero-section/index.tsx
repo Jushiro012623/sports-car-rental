@@ -10,7 +10,7 @@ export const HeroSection = () => {
     const client = 250
 
     return (
-        <Section id="hero" className="relative h-screen w-full mx-auto flex">
+        <Section id="hero" className="relative min-h-svh w-full mx-auto flex overflow-hidden sm:h-screen">
             <div className="relative mx-auto max-w-8xl w-full">
                 <Image
                     src="/bmw.svg"
