@@ -167,25 +167,45 @@ export const rentalRequirements: RentalRequirements[] = [
         id: 1,
         requirement: "21 years",
         icon: BsPersonCircle,
-        description: "Minimum age"
+        description: "Minimum age",
+        breakdown: [
+            "Primary renter must be at least 21 years old.",
+            "Some premium or high-performance vehicles may require a higher minimum age.",
+            "Age verification is completed before vehicle handover."
+        ]
     },
     {
         id: 2,
         requirement: "2 Documents",
         icon: BsPatchCheck,
-        description: "Passport and Driver's License"
+        description: "Passport and Driver's License",
+        breakdown: [
+            "A valid passport or government-issued ID is required.",
+            "A valid driver's license must be presented before pickup or delivery.",
+            "Documents must match the renter's booking information."
+        ]
     },
     {
         id: 3,
         requirement: "1 year",
         icon: BsCarFrontFill,
-        description: "Driving experience"
+        description: "Driving experience",
+        breakdown: [
+            "Renter must have at least 1 year of licensed driving experience.",
+            "Additional checks may apply for sports and luxury vehicles.",
+            "The license must be valid for the full rental period."
+        ]
     },
     {
         id: 4,
         requirement: "From 1000$",
         icon: BsWallet2,
-        description: "Security deposit"
+        description: "Security deposit",
+        breakdown: [
+            "A refundable security deposit is required before the rental starts.",
+            "Deposit amount may vary depending on the selected vehicle.",
+            "The deposit is released after the vehicle is returned and inspected."
+        ]
     },
 
 ]

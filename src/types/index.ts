@@ -13,6 +13,7 @@ export type RentalRequirements = {
     requirement: string;
     icon: IconType;
     description: string;
+    breakdown: string[];
 }
 
 export type CarInfo = {
