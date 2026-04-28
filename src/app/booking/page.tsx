@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
 import {Section, TitleText} from "@app/components";
-import {Avatar, Button, Form} from "@heroui/react";
+import {Avatar, Button} from "@heroui/react";
 import {Fragment} from "react";
 import {FAQSection} from "@app/app/components";
 import {BookingForm} from "@app/app/booking/components";
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function BookingPage() {
+
     return (
        <Fragment>
            <Section className="w-full relative overflow-hidden">
@@ -51,9 +52,8 @@ export default function BookingPage() {
                            className="object-cover -z-10"
                            loading="eager"
                        />
-                       <Form className={"mx-auto flex w-full max-w-lg flex-col items-center justify-center gap-6 rounded-3xl bg-container p-5 sm:gap-8 sm:p-8 lg:gap-10 lg:p-10"}>
-                           <BookingForm />
-                       </Form>
+
+                       <BookingForm />
                    </div>
                </Section.Container>
            </Section>

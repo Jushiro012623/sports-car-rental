@@ -3,6 +3,7 @@ import "./globals.css";
 import {Exo_2} from "next/font/google";
 import {Footer, LenisSmoothScroll, NavBar} from "@app/components";
 import clsx from "clsx";
+import {Toast} from "@heroui/react";
 
 const exo = Exo_2({
     subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
         >
         <body className="font-exo bg-body text-white">
         <NavBar/>
+        <Toast.Provider placement={"top end"} className={"top-25"}/>
         <LenisSmoothScroll />
         {children}
         <Footer />
