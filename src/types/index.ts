@@ -25,6 +25,9 @@ export type CarInfo = {
     src: string;
     accelerationSec: number;
     horsepower: number;
+    manufacturer: string;
+    carType: string;
+    transmission: string;
     overview: string;
 }
 

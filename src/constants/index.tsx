@@ -104,7 +104,6 @@ export const socialLinks = [
     }
 
 ]
-
 export const carModels: CarInfo[] = [
     {
         id: 1,
@@ -115,6 +114,9 @@ export const carModels: CarInfo[] = [
         src: "/porsche-gt3-rs.png",
         accelerationSec: 3.2,
         horsepower: 520,
+        manufacturer: "Porsche",
+        carType: "Sports",
+        transmission: "Dual-Clutch",
         overview: "A track-focused icon built for precision, balance, and extreme performance. The Porsche 911 GT3 RS delivers race-inspired handling with everyday supercar presence."
     },
     {
@@ -126,6 +128,9 @@ export const carModels: CarInfo[] = [
         src: "/nissan-gtr-r35.png",
         accelerationSec: 2.7,
         horsepower: 570,
+        manufacturer: "Nissan",
+        carType: "Sports",
+        transmission: "Dual-Clutch",
         overview: "A legendary performance machine known for brutal acceleration, advanced all-wheel drive, and confidence-inspiring control on every road."
     },
     {
@@ -137,6 +142,9 @@ export const carModels: CarInfo[] = [
         src: "/ford-mustang-gtd.png",
         accelerationSec: 2.6,
         horsepower: 486,
+        manufacturer: "Ford",
+        carType: "Muscle",
+        transmission: "Automatic",
         overview: "An aggressive American performance car with motorsport DNA, bold styling, and thrilling power made for unforgettable drives."
     },
     {
@@ -148,6 +156,9 @@ export const carModels: CarInfo[] = [
         src: "/mercedes-amg-gt.png",
         accelerationSec: 3.2,
         horsepower: 816,
+        manufacturer: "Mercedes-Benz",
+        carType: "Luxury",
+        transmission: "Automatic",
         overview: "A luxury performance grand tourer combining AMG power, premium comfort, and refined technology for fast and elegant travel."
     },
     {
@@ -159,6 +170,9 @@ export const carModels: CarInfo[] = [
         src: "/huracan.png",
         accelerationSec: 3.6,
         horsepower: 602,
+        manufacturer: "Lamborghini",
+        carType: "Sports",
+        transmission: "Dual-Clutch",
         overview: "An exotic Italian supercar with dramatic styling, sharp response, and a naturally thrilling driving character that turns every trip into an event."
     },
     {
@@ -170,10 +184,12 @@ export const carModels: CarInfo[] = [
         src: "/srt-demon.png",
         accelerationSec: 3.2,
         horsepower: 826,
+        manufacturer: "Dodge",
+        carType: "Muscle",
+        transmission: "Automatic",
         overview: "A raw muscle car engineered for explosive straight-line performance, massive power, and unmistakable road presence."
     },
 ]
-
 export const rentalRequirements: RentalRequirements[] = [
     {
         id: 1,

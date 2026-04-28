@@ -12,15 +12,19 @@ import {FaCar, FaEnvelope} from "react-icons/fa6";
 import {FaPhone} from "react-icons/fa6";
 import {carModels} from "@app/constants";
 import {CarInfo} from "@app/types";
-import {Fragment, useEffect, useState} from "react";
+import {Fragment, useSyncExternalStore} from "react";
 
+
+const subscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
 
 export const BookingForm = () => {
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+    const mounted = useSyncExternalStore(
+        subscribe,
+        getClientSnapshot,
+        getServerSnapshot,
+    );
 
     if (!mounted) {
         return null;
@@ -78,7 +82,7 @@ export const BookingForm = () => {
                         <DateField.Input className="w-full min-w-0 rounded-full px-4 py-4 sm:px-5">{(segment) => <DateField.Segment segment={segment} />}</DateField.Input>
                     </DateField.Group>
                 </DateField>
-                <DateField className="w-full sm:w-1/2" name="drop_off_date">
+                <DateField className="w-full mt-3 md:mt-0 sm:w-1/2" name="drop_off_date">
                     <Label className={"ml-2 mb-1"}>Drop-off Date</Label>
                     <DateField.Group className={'px-2 py-6.5 rounded-full'}>
                         <DateField.Input className="w-full min-w-0 rounded-full px-4 py-4 sm:px-5">{(segment) => <DateField.Segment segment={segment} />}</DateField.Input>
@@ -86,7 +90,7 @@ export const BookingForm = () => {
                 </DateField>
             </div>
 
-            <Button type={'submit'} className={"w-full max-w-md text-base px-2 py-5.5"}>Book Now</Button>
+            <Button type={'submit'} className={"w-full max-w-md mt-7 text-base px-2 py-5.5"}>Book Now</Button>
         </Fragment>
     )
 }
