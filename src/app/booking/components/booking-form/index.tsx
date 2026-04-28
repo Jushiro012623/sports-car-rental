@@ -2,58 +2,46 @@
 import {
     Button,
     ComboBox,
-    DateField, Form,
+    DateField, Description, Form,
     InputGroup,
     Label,
     ListBox, Spinner,
-    TextField, toast
+    TextField,
+    toast
 } from "@heroui/react";
 import {FaCar, FaEnvelope} from "react-icons/fa6";
 import {FaPhone} from "react-icons/fa6";
 import {carModels} from "@app/constants";
 import {CarInfo} from "@app/types";
-import React, {useState, useSyncExternalStore} from "react";
+import React, {useState, useTransition} from "react";
+import {sendBookingEmailAction} from "@app/app/booking/actions/send-booking-email";
 
-
-const subscribe = () => () => {
-};
-const getClientSnapshot = () => true;
-const getServerSnapshot = () => false;
 
 export const BookingForm = () => {
+    const [errors, setErrors] = useState<Record<string, string>>({});
+    const [isPending, startTransition] = useTransition();
 
-    const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
-    const mounted = useSyncExternalStore(
-        subscribe,
-        getClientSnapshot,
-        getServerSnapshot,
-    );
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
 
-    if (!mounted) {
-        return null;
-    }
+        const formData = new FormData(event.currentTarget);
 
-    const onSubmitAction = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
+        startTransition(async () => {
+            const result = await sendBookingEmailAction(formData);
 
-        setIsSubmitting(true)
+            if (!result.success) {
+                setErrors(result.errors ?? {});
+                toast.danger(result.message);
+                return;
+            }
 
-        const loadingId = toast("Submitting...", {
-            isLoading: true,
-            timeout: 0,
+            setErrors({});
+            toast.success(result.message);
         });
-        setTimeout(() => {
-            toast.close(loadingId);
-            toast.success("Booking submitting", {
-                description: "Your booking has been submitted successfully",
-            });
-            setIsSubmitting(false)
-        }, 2500)
-
-    }
+    };
 
     return (
-        <Form onSubmit={onSubmitAction}
+        <Form onSubmit={handleSubmit}
               className={"mx-auto flex w-full max-w-lg flex-col items-center justify-center gap-6 rounded-3xl bg-container p-5 sm:gap-8 sm:p-8 lg:gap-10 lg:p-10"}>
             <TextField className="w-full max-w-md" name="full_name">
                 <Label className={"ml-2 mb-1"}>Full Name</Label>
@@ -63,6 +51,7 @@ export const BookingForm = () => {
                     </InputGroup.Prefix>
                     <InputGroup.Input className="w-full min-w-0 px-4 py-4 sm:px-5" placeholder="Your Full Name"/>
                 </InputGroup>
+                {errors.fullName && <Description className={"text-danger"}>{errors.fullName}</Description>}
             </TextField>
 
             <TextField className="w-full max-w-md" name="phone_number">
@@ -71,12 +60,13 @@ export const BookingForm = () => {
                     <InputGroup.Prefix>
                         <FaPhone className="size-4 text-muted ml-3"/>
                     </InputGroup.Prefix>
-                    <InputGroup.Input className="w-full min-w-0 rounded-full px-4 py-4 sm:px-5"
+                    <InputGroup.Input className="w-full min-w-0  px-4 py-4 sm:px-5"
                                       placeholder="Your Phone Number"/>
                 </InputGroup>
+                {errors.phoneNumber && <Description className={"text-danger"}>{errors.phoneNumber}</Description>}
             </TextField>
 
-            <ComboBox className="w-full max-w-md">
+            <ComboBox className="w-full max-w-md" name="ride_id">
                 <Label className={"ml-2 mb-1"}>Choose Your Ride</Label>
                 <ComboBox.InputGroup>
                     <InputGroup className={"rounded-full w-full"}>
@@ -98,6 +88,7 @@ export const BookingForm = () => {
                         ))}
                     </ListBox>
                 </ComboBox.Popover>
+                {errors.rideId && <Description className={"text-danger"}>{errors.rideId}</Description>}
             </ComboBox>
 
             <div className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
@@ -107,6 +98,7 @@ export const BookingForm = () => {
                         <DateField.Input className="w-full min-w-0 rounded-full px-4 py-4 sm:px-5">{(segment) =>
                             <DateField.Segment segment={segment}/>}</DateField.Input>
                     </DateField.Group>
+                    {errors.pickUpDate && <Description className={"text-danger"}>{errors.pickUpDate}</Description>}
                 </DateField>
                 <DateField className="w-full mt-3 md:mt-0 sm:w-1/2" name="drop_off_date">
                     <Label className={"ml-2 mb-1"}>Drop-off Date</Label>
@@ -114,12 +106,13 @@ export const BookingForm = () => {
                         <DateField.Input className="w-full min-w-0 rounded-full px-4 py-4 sm:px-5">{(segment) =>
                             <DateField.Segment segment={segment}/>}</DateField.Input>
                     </DateField.Group>
+                    {errors.dropOffDate && <Description className={"text-danger"}>{errors.dropOffDate}</Description>}
                 </DateField>
             </div>
 
             <Button
-                isDisabled={isSubmitting}
-                isPending={isSubmitting}
+                isDisabled={isPending}
+                isPending={isPending}
                 type={'submit'}
                 className={"w-full max-w-md mt-7 text-base px-2 py-5.5"}
             >
