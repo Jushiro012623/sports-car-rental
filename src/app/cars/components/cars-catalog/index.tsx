@@ -37,7 +37,7 @@ export const CarsCatalog = ({cars}: CarsCatalogProps) => {
 
     return (
         <>
-            <CarFilters filters={filters} onFiltersChange={setFilters} />
+            <CarFilters filters={filters} onFiltersChangeAction={setFilters} />
 
             {filteredCars.length > 0 ? (
                 <div className="mt-12 grid grid-cols-1 gap-5 sm:mt-16 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
